@@ -7,3 +7,5 @@
 ip link set $INTERFACE up
 ip addr add 10.0.0.1/8 dev $INTERFACE
 # ip route add 10.254.254.0/24 dev $INTERFACE
+
+/sbin/iptables -P FORWARD ACCEPT
