@@ -1,0 +1,4 @@
+show ip ospf 
+show ip ospf neighbor 
+show ip ospf interface 
+show ip ospf route

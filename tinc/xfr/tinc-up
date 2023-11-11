@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# echo 'Unconfigured tinc-up script, please edit '$0'!'
+
+#ifconfig $INTERFACE <your vpn IP address> netmask <netmask of whole VPN>
+
+ip link set $INTERFACE up
+ip addr add 10.0.0.1/8 dev $INTERFACE
+# ip route add 10.254.254.0/24 dev $INTERFACE
