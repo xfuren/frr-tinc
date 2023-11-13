@@ -4,7 +4,7 @@
 
 #ifconfig $INTERFACE <your vpn IP address> netmask <netmask of whole VPN>
 
-ip link set $INTERFACE up
-ip addr add 192.168.0.1/24 dev $INTERFACE
+/sbin/ip link set $INTERFACE up
+/sbin/ip addr add 192.168.0.1/24 dev $INTERFACE
 
 /sbin/iptables -P FORWARD ACCEPT
