@@ -27,5 +27,6 @@ docker run -d \
     --privileged \
     --restart=always \
     -v  $SCRIPTPATH/frr:/etc/frr \
+    -v $SCRIPTPATH/tinc:/etc/tinc \
     -v $SCRIPTPATH/root:/root \
     frr-tinc
