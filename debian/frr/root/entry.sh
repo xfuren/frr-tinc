@@ -1,7 +1,7 @@
 #!/bin/bash
 
-/usr/bin/syncthing &
-/usr/lib/frr/frrinit.sh start
+/bin/syncthing &
+/etc/init.d/frr start
 
 while true
 do

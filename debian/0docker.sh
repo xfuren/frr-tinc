@@ -11,13 +11,12 @@ docker rm $NAME
 
 # docker run -d \
 #     --name $NAME \
-#     --hostname=$HOSTNAME \
 #     --net=host \
+#     --device=/dev/net/tun \
 #     --privileged \
+#     --volume $SCRIPTPATH/workspace:/workspace \
 #     --restart=always \
-#     -v  $SCRIPTPATH/frr:/etc/frr \
-#     -v $SCRIPTPATH/tinc:/etc/tinc \
-#     -v $SCRIPTPATH/root:/root \
+    # -v $SCRIPTPATH/st-sync:/var/syncthing \
 #     frr-tinc
 
 docker run -d \
@@ -27,5 +26,6 @@ docker run -d \
     --privileged \
     --restart=always \
     -v  $SCRIPTPATH/frr:/etc/frr \
+    -v $SCRIPTPATH/tinc:/etc/tinc \
     -v $SCRIPTPATH/root:/root \
     frr-tinc
