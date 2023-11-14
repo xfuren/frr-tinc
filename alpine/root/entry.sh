@@ -9,6 +9,7 @@ do
   /usr/sbin/tincd -D -n xfr 
   echo $(date -u) "tinc stopped..." >> /tmp/tinc.log
   sleep 1
+  
 done
 
 /usr/bin/tail -f /dev/null
